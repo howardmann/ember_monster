@@ -1,0 +1,7 @@
+<h2>ALL Monsters</h2>
+
+{{#each model as |monster|}}
+  {{#link-to 'monsters.monster' monster}}
+    <p>{{monster.name}}</p>
+  {{/link-to}}
+{{/each}}

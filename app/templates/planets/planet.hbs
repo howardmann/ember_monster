@@ -1,0 +1,11 @@
+<h2>SINGLE Planet</h2>
+<p>Name: {{model.name}}</p>
+<p>Description: {{model.description}}</p>
+<hr>
+<p><strong>Monsters:</strong></p>
+{{#each model.monsters as |monster|}}
+  {{#link-to 'monsters.monster' monster}}
+    <p>{{monster.name}}</p>
+  {{/link-to}}
+
+{{/each}}

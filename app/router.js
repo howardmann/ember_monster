@@ -7,6 +7,16 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
+  this.route('monsters', function() {
+    this.route('monster', {
+      path: ':monster_id'
+    });
+  });
+  this.route('planets', function() {
+    this.route('planet', {
+      path: ':planet_id'
+    });
+  });
 });
 
 export default Router;
