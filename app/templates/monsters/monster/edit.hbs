@@ -1,0 +1,30 @@
+<h2>EDIT Planet: {{model.name}}</h2>
+
+<form {{action 'updateMonster' model.monster on="submit"}}>
+  <p>
+    <label>Name:</label>
+    {{input type="text" value=model.monster.name}}
+  </p>
+  <p>
+    <label>Age:</label>
+    {{input type="number" value=model.monster.age}}
+  </p>
+  <p>
+    <label>Description</label>
+    {{input type="text" value=model.monster.description}}
+  </p>
+  <p>
+    <label>Select Planet</label>
+    <select>
+      {{#each model.planets as |planet|}}
+        {{#if (eq model.monster.planet.name planet.name)}}
+          <option value="{{planet.id}}" selected>{{planet.name}}</option>
+        {{else}}
+          <option value="{{planet.id}}">{{planet.name}}</option>
+        {{/if}}
+      {{/each}}
+    </select>
+  </p>
+
+  <input type="submit">
+</form>

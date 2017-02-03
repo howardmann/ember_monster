@@ -1,9 +1,1 @@
-<h2>SINGLE Monster</h2>
-<p>Name: {{model.name}}</p>
-<p>Age: {{model.age}}</p>
-<p>Description: {{model.description}}</p>
-<hr>
-<p><strong>Planet:</strong></p>
-{{#link-to 'planets.planet' model.planet}}
-<p>{{model.planet.name}}</p>
-{{/link-to}}
+{{outlet}}
