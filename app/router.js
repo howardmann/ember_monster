@@ -23,6 +23,15 @@ Router.map(function() {
     });
     this.route('new');
   });
+  this.route('trainers', function() {
+    this.route('trainer', {
+      path: ':trainer_id'
+    }, function() {
+      this.route('show');
+      this.route('edit');
+    });
+    this.route('new');
+  });
 });
 
 export default Router;

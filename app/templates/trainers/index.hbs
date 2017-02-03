@@ -1,0 +1,10 @@
+<h2>ALL Trainers</h2>
+
+{{#each model as |trainer|}}
+  {{#link-to 'trainers.trainer.show' trainer}}
+    <p>{{trainer.name}}</p>
+  {{/link-to}}
+{{/each}}
+
+<hr>
+{{#link-to 'trainers.new'}}NEW Trainer{{/link-to}}

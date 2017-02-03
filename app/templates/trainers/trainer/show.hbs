@@ -1,0 +1,11 @@
+<h2>SINGLE Trainer</h2>
+<p>Name: {{model.name}}</p>
+<p>Age: {{model.age}}</p>
+<hr>
+<p><strong>Planet:</strong></p>
+{{#link-to 'planets.planet' model.planet}}
+<p>{{model.planet.name}}</p>
+{{/link-to}}
+<hr>
+{{#link-to 'trainers.trainer.edit' model}}EDIT {{model.name}}{{/link-to}}<br>
+<button {{action "deleteTrainer" model}}>DELETE TRAINER</button>
