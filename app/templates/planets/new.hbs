@@ -1,0 +1,14 @@
+<h2>NEW Planet</h2>
+
+<form {{action 'createPlanet' model on="submit"}}>
+  <p>
+    <label>Name:</label>
+    {{input type="text" value=model.name}}
+  </p>
+  <p>
+    <label>Description</label>
+    {{input type="text" value=model.description}}
+  </p>
+
+  <input type="submit">
+</form>

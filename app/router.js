@@ -11,11 +11,13 @@ Router.map(function() {
     this.route('monster', {
       path: ':monster_id'
     });
+    this.route('new');
   });
   this.route('planets', function() {
     this.route('planet', {
       path: ':planet_id'
     });
+    this.route('new');
   });
 });
 

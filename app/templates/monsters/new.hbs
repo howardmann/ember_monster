@@ -1,0 +1,26 @@
+<h2>NEW Monster</h2>
+
+<form {{action 'createMonster' model.monster on="submit"}}>
+  <p>
+    <label>Name:</label>
+    {{input type="text" value=model.monster.name}}
+  </p>
+  <p>
+    <label>Age:</label>
+    {{input type="number" value=model.monster.age}}
+  </p>
+  <p>
+    <label>Description</label>
+    {{input type="text" value=model.monster.description}}
+  </p>
+  <p>
+    <label>Select Planet</label>
+    <select>
+      {{#each model.planets as |planet|}}
+        <option value="{{planet.id}}">{{planet.name}}</option>
+      {{/each}}
+    </select>
+  </p>
+
+  <input type="submit">
+</form>
